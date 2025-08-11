@@ -204,6 +204,44 @@ img {
   margin-top: 4rem;
 }
 
+/* ABOUT-US */
+
+@media (min-width: 768px) {
+  .about-us {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .about-us__image,
+  .about-us__text {
+    flex-basis: 50%;
+  }
+}
+
+.curso {
+  padding: 3rem;
+  border-bottom: 2px solid var(--primary);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .curso {
+    padding: 3rem;
+    border-bottom: 2px solid var(--primary);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+.curso:last-of-type {
+  border: none;
+}
+
 /* 
 CONTACT PAGE */
 
@@ -228,4 +266,16 @@ CONTACT PAGE */
 
 .contactame {
   margin-bottom: 0;
+}
+
+.curso:last-of-type {
+  border: none;
+}
+
+.curso__label {
+  font-weight: bold;
+}
+
+.curso__info {
+  font-weight: normal;
 }
