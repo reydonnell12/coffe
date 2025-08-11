@@ -1,0 +1,164 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Fjalla+One&family=Roboto+Slab:wght@100..900&family=Staatliches&display=swap");
+
+:root {
+  --mainSource: "Bitcount Prop Single", system-ui;
+  --sourceParagraph: "Fjalla One", sans-serif;
+
+  --primary: #784d3c;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--sourceParagraph);
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/* GLOGALS */
+.container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--mainSource);
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* UTLITIES */
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.header {
+  background-image: url("../img/banner.webp");
+  height: 60rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 768px) {
+  .header__text {
+    margin-top: 5rem;
+  }
+}
+.header__text {
+  text-align: center;
+  color: var(--white);
+  margin-top: 12rem;
+}
+
+@media (min-width: 768px) {
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  color: var(--white);
+}
+
+.logo__name {
+  font-weight: 400;
+}
+.logo__bold {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .navegation {
+    display: flex;
+    gap: 2rem;
+  }
+}
+.navegation__link {
+  display: block;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+  }
+}
+
+/* 
+CONTACT PAGE */
+
+.contacto__logo {
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 40rem;
+  width: 40rem;
+}
+
+.header__conatcto {
+  display: grid;
+  justify-content: center;
+}
+.header__contacto {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.contactame {
+  margin-bottom: 0;
+}
