@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="bar">
+          <a class="logo" href="index.html">
+            <h1 class="logo__name no-margin text-center">
+              Tomemos <span class="logo__bold">Tinto</span>
+            </h1>
+          </a>
+          <nav class="navegation">
+            <a href="us.html" class="navegation__link">Nosotros</a>
+            <a href="coffes.html" class="navegation__link">Cafés</a>
+            <a href="contact.html" class="navegation__link">Contacto</a>
+          </nav>
+        </div>
+      </div>
+      <div class="header__text">
+        <h2 class="no-margin">Blog para tomar café con los amigos</h2>
+        <p class="no-margin">Seamos un gran equipo</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <h3 class="text-center">Contacto</h3>
+
+      <div class="logo__contacto container">
+        <div class="contacto__logo"></div>
+      </div>
+
+      <div class="contacto-bg"></div>
+
+      <form class="formulario" action="/contacto" method="POST">
+        <div class="campo">
+          <label class="campo__label" for="nombre">Nombre: </label>
+          <input
+            class="campo__field"
+            type="text"
+            placeholder="nombre"
+            id="nombre"
+          />
+        </div>
+
+        <div class="campo">
+          <label class="campo__label" for="email">Email: </label>
+          <input
+            class="campo__field"
+            type="email"
+            placeholder="Email"
+            id="email"
+          />
+        </div>
+
+        <div class="campo">
+          <label class="campo__label" for="mensaje">Mensaje: </label>
+          <textarea
+            class="campo__field campo__field--textarea"
+            id="mensaje"
+          ></textarea>
+        </div>
+
+        <div class="campo">
+          <input type="submit" value="Enviar" class="bottom bottom--primary" />
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="bar">
+          <a class="logo" href="index.html">
+            <h1 class="logo__name no-margin text-center">
+              Tomemos <span class="logo__bold">Tinto</span>
+            </h1>
+          </a>
+          <nav class="navegation">
+            <a href="us.html" class="navegation__link">Nosotros</a>
+            <a href="coffes.html" class="navegation__link">Cafés</a>
+            <a href="contact.html" class="navegation__link">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
