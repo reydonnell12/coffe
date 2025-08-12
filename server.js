@@ -13,22 +13,22 @@ app.post("/contacto", (req, res) => {
 
   // Configura el transporte de correo
   const transporter = nodemailer.createTransport({
-    service: "gmail", // o 'hotmail', 'yahoo'
+    service: "gmail",
     auth: {
-      user: "TU_CORREO@gmail.com", // <-- tu correo
-      pass: "TU_CONTRASEÑA_APP", // <-- contraseña de aplicación
+      user: process.env.EMAIL_USER, // <-- desde variables de entorno
+      pass: process.env.EMAIL_PASS, // <-- desde variables de entorno
     },
   });
 
   const mailOptions = {
-    from: email,
-    to: "programacion.expert.rey@gmail.com","Jose.lara2413@correo.policia.gov.co", // <-- donde quieres recibirlo
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_TO, // puedes poner varios separados por coma
     subject: `Nuevo mensaje de ${nombre}`,
     text: `
-      Nombre: ${nombre}
-      Email: ${email}
-      Mensaje: ${mensaje}
-    `,
+    Nombre: ${nombre}
+    Email: ${email}
+    Mensaje: ${mensaje}
+  `,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
