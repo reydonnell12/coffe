@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="styles/normalize.css" as="style" />
     <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preload" href="styles/style.css" as="style" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Blog Coffe</title>
+    <meta name="description" content="pagina de cafe" />
+    <link rel="prefetch" href="contact.html" />
   </head>
   <body>
     <header class="header">
@@ -34,7 +38,10 @@
 
         <article class="entry">
           <div class="entry_image">
-            <img src="img/blog1.jpg" alt="blog1" />
+            <picture>
+              <source src="img/cafe1.webp" type="image/webp" />
+              <img loading="lazy" src="img/cafe1.jpg" alt="cafe1" />
+            </picture>
           </div>
           <div class="entry__content">
             <h4 class="no-margin">Tipos de Grano de Café</h4>
@@ -51,7 +58,7 @@
 
         <article class="entry">
           <div class="entry_image">
-            <img src="img/blog2.jpg" alt="blog2" />
+            <img loading="lazy" src="img/blog2.jpg" alt="blog2" />
           </div>
           <div class="entry__content">
             <h4 class="no-margin">Tres Deliciosas Recetas de Café</h4>
@@ -67,7 +74,7 @@
 
         <article class="entry">
           <div class="entry_image">
-            <img src="img/blog3.jpg" alt="blog3" />
+            <img loading="lazy" src="img/blog3.jpg" alt="blog3" />
           </div>
           <div class="entry__content">
             <h4 class="no-margin">Beneficios del Café</h4>
